@@ -1,0 +1,5 @@
+<div class="gobang_main" [style.height.px]="height">
+    <ul [style.height.px]="width/15" *ngFor="let group of gobangArr;index as groupIndex;first as groupFirst;last as groupLast;">
+        <li class="gobang_block" (click)="setItem(item,groupIndex,itemIndex)" [class.active]="item.length>0" [class.black]="item === 'black'" [class.white]="item === 'white'" [class.top]="groupFirst" [class.bottom]="groupLast" [class.left]="itemFirst" [class.right]="itemRight" *ngFor="let item of group;index as itemIndex; first as itemFirst;last as itemRight"></li>
+    </ul>
+</div>
